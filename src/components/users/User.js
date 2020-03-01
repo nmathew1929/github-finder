@@ -4,7 +4,7 @@ import Repos from "../repos/Repos";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const User = ({ user, loading, getUser, getUserRepos, repos, match }) => {
+const User = ({ match, getUser, getUserRepos, user, repos, loading }) => {
   useEffect(() => {
     getUser(match.params.login);
     getUserRepos(match.params.login);
